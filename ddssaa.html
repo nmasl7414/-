@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>九宮格</title>
+</head>
+<style>
+
+
+    .aa{
+        width: 100px;
+        height: 100px;
+        background-color: rgb(135, 206, 235);
+        margin: 50px;
+        display: inline-block;
+    }
+</style>
+<body background="seaandnight.jpg" >
+    <div class="aa"></div>
+    <div class="aa"></div>
+    <div class="aa"></div><br>
+    <div class="aa"></div>
+    <div class="aa"></div>
+    <div class="aa"></div><br>
+    <div class="aa"></div>
+    <div class="aa"></div>
+    <div class="aa"></div><br>
+    <input type="button" value="更新" id="re" style="font-size: 30px;">
+
+</body>
+</html>
+<script>
+    $(".aa").click(function(){
+        
+        if($(this).css("background-color")=="rgb(135, 206, 235)"){
+            $(this).css("background-color","yellow")
+
+        }
+        if(($(".aa:eq(0)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(1)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(2)").css("background-color")=="rgb(255, 255, 0)"))  alert("you win!!!");
+        if(($(".aa:eq(3)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(4)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(5)").css("background-color")=="rgb(255, 255, 0)"))  alert("you win!!!");
+        if(($(".aa:eq(6)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(7)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(8)").css("background-color")=="rgb(255, 255, 0)"))  alert("you win!!!");
+        
+        if(($(".aa:eq(0)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(4)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(8)").css("background-color")=="rgb(255, 255, 0)"))  alert("you win!!!");
+        if(($(".aa:eq(2)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(4)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(6)").css("background-color")=="rgb(255, 255, 0)"))  alert("you win!!!");
+        
+        if(($(".aa:eq(0)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(3)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(6)").css("background-color")=="rgb(255, 255, 0)"))  alert("you win!!!");
+        if(($(".aa:eq(1)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(4)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(7)").css("background-color")=="rgb(255, 255, 0)"))  alert("you win!!!");
+        if(($(".aa:eq(2)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(5)").css("background-color")=="rgb(255, 255, 0)")&&($(".aa:eq(8)").css("background-color")=="rgb(255, 255, 0)"))  alert("you win!!!");
+
+
+
+
+    });
+    $("#re").click(function(){
+        $(".aa").css("background-color","skyblue");
+    });
+</script>
